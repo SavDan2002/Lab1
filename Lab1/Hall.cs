@@ -1,18 +1,14 @@
 ﻿namespace Lab1
 {
-    internal class Hall : IHallForPrincess, IHall
+    public class Hall : IHallForPrincess, IHall
     {
         private const int _СandidatesCount = 100;
         private List<Сandidate> _hall = new List<Сandidate>();
         private List<Сandidate> _hallSort = new List<Сandidate>();
 
-        public Hall()
+        public Hall(IGenerator generator)
         {
-            for (int i = 0; i < _СandidatesCount; i++)
-            {
-                _hall.Add(new Сandidate());
-            }
-
+            _hall = generator.CreateListСandidate();
             _hallSort.AddRange(from c in _hall orderby c.Mark select c);
         }
 

@@ -2,7 +2,7 @@
 
 namespace Lab1
 {
-    internal class Princess : IHostedService
+    public class Princess : IHostedService
     {
         private readonly Friend _friend;
         private readonly IHallForPrincess _hall;

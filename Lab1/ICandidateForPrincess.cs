@@ -1,6 +1,6 @@
 ﻿namespace Lab1
 {
-    internal interface IСandidateForPrincess
+    public interface IСandidateForPrincess
     {
         string Name { get; }
     }

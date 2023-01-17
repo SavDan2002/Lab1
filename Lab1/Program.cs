@@ -15,6 +15,7 @@ namespace Lab1
             return Host.CreateDefaultBuilder(args).ConfigureServices((hostContext, services) =>
             {
                 services.AddHostedService<Princess>();
+                services.AddScoped<IGenerator, Generator>();
                 services.AddScoped<Hall>();
                 services.AddScoped<IHall>(sp => sp.GetRequiredService<Hall>());
                 services.AddScoped<IHallForPrincess>(sp => sp.GetRequiredService<Hall>());

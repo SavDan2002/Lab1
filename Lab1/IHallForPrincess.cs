@@ -1,6 +1,6 @@
 ﻿namespace Lab1
 {
-    internal interface IHallForPrincess
+    public interface IHallForPrincess
     {
         public int GetMark(IСandidateForPrincess сandidate);
         public int GetСandidatesCount();

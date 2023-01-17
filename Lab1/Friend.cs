@@ -1,6 +1,6 @@
 ﻿namespace Lab1
 {
-    internal class Friend
+    public class Friend
     {
         private readonly IHall _hall;
 
